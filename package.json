@@ -1,0 +1,24 @@
+{
+  "name": "men_stack_crud_app_build",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/areyes2853/MEN_Stack_CRUD_App_Build.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/areyes2853/MEN_Stack_CRUD_App_Build/issues"
+  },
+  "homepage": "https://github.com/areyes2853/MEN_Stack_CRUD_App_Build#readme",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}
