@@ -1,0 +1,29 @@
+<!-- views/fruits/show.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= cars.name %></title> <!-- Dynamic title based on fruit name -->
+  </head>
+ <!-- views/fruits/show.ejs -->
+
+<body>
+    <h1><%= cars.name %></h1>
+    <!-- Conditional rendering based on fruit's readiness -->
+    <% if (cars.isCarReadytoBeSold) { %>
+      <p>This person is ready to buy!</p>
+    <% } else { %>
+      <p>This person is not ready to buy!</p>
+    <% } %>
+
+    <form action="/cars/<%=cars._id%>?_method=DELETE" method="POST">
+        <button type="submit">Delete <%= cars.name %></button>
+      </form>
+      <a href="/cars/<%= cars._id %>/edit">Edit <%= cars.name %></a>
+    <a href="/cars/">Back to Cars</a>
+
+  </body>
+  
+</html>

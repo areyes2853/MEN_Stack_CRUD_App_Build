@@ -1,0 +1,22 @@
+<body>
+    <!-- update the header -->
+    <h1>Edit <%= car.name %></h1>
+    <!-- Ensure the form contains all fields and is properly closed -->
+    <form action="/cars/<%= car._id %>?_method=PUT" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" name="name" value="<%= car.name %>" />
+      
+      <label for="model">Model:</label>
+      <input type="text" name="model" value="<%= car.model %>" />
+
+      <label for="color">Color:</label>
+      <input type="text" name="color" value="<%= car.color %>" />
+
+      <label for="isCarReadytoBeSold">Ready to buy?</label>
+      <input type="checkbox" name="isCarReadytoBeSold" <% if (car.isCarReadytoBeSold) { %>checked<% } %> />
+
+      <!-- update the button text -->
+      <button type="submit">Update Car</button>
+    </form>
+    <a href="/cars">Back to Cars</a>
+</body>
